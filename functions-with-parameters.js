@@ -17,7 +17,12 @@ console.log(result);
 // greeter("Jan") geeft "Hoi Jan!"
 // greeter("Kees") geeft "Hoi Kees!"
 
+function giveGreeting(name) {
+  return 'Hoi ' + name + '!';
+}
 
+const greeting = giveGreeting('Jan');
+console.log(greeting);
 
 /* Opdracht 2 */
 // Schrijf een functie genaamd minutesToSeconds, die een hoeveelheid minuten verwacht (als een getal) en teruggeeft hoeveel seconden dat zijn.
@@ -26,7 +31,12 @@ console.log(result);
 // minutesToSeconds(3) geeft 180
 // minutesToSeconds(23) geeft 1380
 
+function minutesToSeconds(number) {
+  return number * 60;
+}
 
+const seconds = minutesToSeconds(23);
+console.log(seconds);
 
 /* Opdracht 3 */
 // Schrijf een functie genaamd merge, die twee strings verwacht en deze aan elkaar geplakt teruggeeft.
@@ -35,7 +45,12 @@ console.log(result);
 // merge("abra", "cadabra") geeft "abracadabra"
 // merge("zoet", "sappig") geeft "zoetsappig"
 
+function merge(firstString, secondString) {
+  return firstString + secondString;
+}
 
+const mergedWord = merge("zoet", "sappig");
+console.log(mergedWord);
 
 
 /* Opdracht  4 */
@@ -44,7 +59,14 @@ console.log(result);
 // calculateDogYears(6) geeft "Jouw hond is 42 jaar oud in mensenjaren."
 // calculateDogYears(2) geeft "Jouw hond is 14 jaar oud in mensenjaren."
 
+function calculateDogYears(dogAge) {
+  return "Jouw hond is " + (dogAge * 7) + " jaar oud in mensenjaren.";
+}
 
+const humanAge = calculateDogYears(6);
+console.log(humanAge);
+
+// Eventueel een variabele aanmaken binnen de functie met humanAge om de berekening te maken en buiten de functie andere variabele, bijvoorbeeld myDog.
 
 /* Opdracht 5 */
 // Schrijf een functie genaamd wrapper, die twee parameters verwacht: een woord en een karakter
@@ -54,7 +76,12 @@ console.log(result);
 // wrapper("beep", "_") geeft "_beep_"
 // wrapper("kaas", "Q") geeft "QkaasQ"
 
+function wrapper(word, character) {
+  return character + word + character;
+}
 
+const outcome = wrapper("bril", "*");
+console.log(outcome);
 
 /* Bonus opdracht  */
 // Schrijf een functie genaamd createDetailString, die een object met de properties firstName, lastName en profession verwacht en een zin teruggeeft
@@ -62,4 +89,9 @@ console.log(result);
 // createDetailString({ firstName: 'Jan', lastName: 'Jansen', profession: 'docent'}) geeft "Het beroep vam Jan Jansen is docent."
 // createDetailString({ firstName: 'Kees', lastName: 'Klaasen', profession: 'brandweerman'}) geeft "Het beroep vam Kees Klaasen is brandweerman."
 
+function createDetailString(detailsObject) {
+  return "Het beroep van " + detailsObject.firstName + " " + detailsObject.lastName + " is " + detailsObject.profession;
+}
 
+const detailString = createDetailString({ firstName: 'Jan', lastName: 'Jansen', profession: 'docent'});
+console.log(detailString);
